@@ -17,6 +17,17 @@
       <img src="https://img.shields.io/badge/Version-v2.1.0_Beta-34C759?style=for-the-badge" alt="Version v2.1.0">
     </a>
   </p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/macOS-13.0%2B-black?style=flat&logo=apple" alt="macOS 13+">
+    &nbsp;
+    <img src="https://img.shields.io/badge/iOS-16.0%2B-black?style=flat&logo=apple" alt="iOS 16+">
+    &nbsp;
+    <img src="https://img.shields.io/badge/Swift-6.0-F05138?style=flat&logo=swift&logoColor=white" alt="Swift 6.0">
+    &nbsp;
+    <img src="https://img.shields.io/badge/C-PAM%20Module-blue?style=flat&logo=c" alt="C PAM">
+    &nbsp;
+    <img src="https://img.shields.io/badge/Security-Secure%20Enclave%20P--256-blue?style=flat&logo=apple" alt="Secure Enclave P-256">
+  </p>
 </p>
 
 ---
