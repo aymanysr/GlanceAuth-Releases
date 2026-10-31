@@ -18,15 +18,25 @@
     </a>
   </p>
   <p align="center">
-    <img src="https://img.shields.io/badge/macOS-13.0%2B-black?style=flat&logo=apple" alt="macOS 13+">
+    <a href="https://www.apple.com/macos">
+      <img src="https://img.shields.io/badge/macOS-13.0%2B-black?style=flat&logo=apple" alt="macOS 13+">
+    </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/iOS-16.0%2B-black?style=flat&logo=apple" alt="iOS 16+">
+    <a href="https://www.apple.com/ios">
+      <img src="https://img.shields.io/badge/iOS-16.0%2B-black?style=flat&logo=apple" alt="iOS 16+">
+    </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/Swift-6.0-F05138?style=flat&logo=swift&logoColor=white" alt="Swift 6.0">
+    <a href="https://swift.org">
+      <img src="https://img.shields.io/badge/Swift-6.0-F05138?style=flat&logo=swift&logoColor=white" alt="Swift 6.0">
+    </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/C-PAM%20Module-blue?style=flat&logo=c" alt="C PAM">
+    <a href="https://developer.apple.com/documentation/security">
+      <img src="https://img.shields.io/badge/C-PAM%20Module-blue?style=flat&logo=c" alt="C PAM">
+    </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/Security-Secure%20Enclave%20P--256-blue?style=flat&logo=apple" alt="Secure Enclave P-256">
+    <a href="https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web">
+      <img src="https://img.shields.io/badge/Security-Secure%20Enclave%20P--256-blue?style=flat&logo=apple" alt="Secure Enclave P-256">
+    </a>
   </p>
 </p>
 
