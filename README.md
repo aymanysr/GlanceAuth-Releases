@@ -1,127 +1,125 @@
-# GlanceAuth
-
-**GlanceAuth** unlocks and authenticates your Mac using your iPhone's Face ID with end-to-end Secure Enclave encryption, smart clamshell routing, and proximity auto-lock.
-
 <p align="center">
-  <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.dmg">
-    <img src="https://img.shields.io/badge/Download_for_macOS-DMG-black?style=for-the-badge&logo=apple" alt="Download macOS DMG">
-  </a>
-  &nbsp;
-  <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.ipa">
-    <img src="https://img.shields.io/badge/Download_for_iOS-IPA-blue?style=for-the-badge&logo=apple" alt="Download iOS IPA">
-  </a>
-  &nbsp;
-  <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases">
-    <img src="https://img.shields.io/badge/Latest_Release-v0.1.0-green?style=for-the-badge" alt="Latest Release">
-  </a>
+  <h1 align="center">GlanceAuth</h1>
+  <p align="center">
+    <strong>Unlock and authenticate your Mac with your iPhone's Face ID.</strong><br>
+    Works in clamshell mode, with external monitors, and across all macOS terminal & system prompts.
+  </p>
+  <p align="center">
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.dmg">
+      <img src="https://img.shields.io/badge/Download_for_macOS-DMG-black?style=for-the-badge&logo=apple" alt="Download macOS DMG">
+    </a>
+    &nbsp;
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.ipa">
+      <img src="https://img.shields.io/badge/Download_for_iOS-IPA-007AFF?style=for-the-badge&logo=apple" alt="Download iOS IPA">
+    </a>
+    &nbsp;
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/tag/v0.1.0">
+      <img src="https://img.shields.io/badge/Version-v0.1.0_Beta-34C759?style=for-the-badge" alt="Version v0.1.0">
+    </a>
+  </p>
 </p>
 
 ---
 
 ## Previews
 
-<p align="center">
-  <img src="assets/settings_window.png" width="48%" alt="GlanceAuth Mac Settings">
-  &nbsp;
-  <img src="assets/companion_screen.png" width="45%" alt="GlanceAuth iOS Companion">
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="62%" valign="middle">
+        <img src="assets/settings_window.png" width="460" alt="GlanceAuth macOS Menu Bar Settings" style="border-radius: 8px;" />
+        <br>
+        <sub><b>macOS Settings</b>: Smart clamshell routing, proximity auto-lock, and BLE diagnostics</sub>
+      </td>
+      <td align="center" width="38%" valign="middle">
+        <img src="assets/companion_screen.png" width="210" alt="GlanceAuth iOS Companion App" style="border-radius: 20px;" />
+        <br>
+        <sub><b>iOS Companion</b>: Hardware Face ID verification</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## Why GlanceAuth?
+
+If you dock your MacBook or use an external keyboard and monitor, you already know the frustration:
+
+| Pain Point | Built-in Mac Touch ID | Apple Watch Unlock | GlanceAuth |
+| :--- | :---: | :---: | :---: |
+| **Works with MacBook Lid Closed (Clamshell)** | ❌ (Keyboard hidden) | ⚠️ (Inconsistent) |  **Auto-routes to Face ID** |
+| **Authenticates `sudo` in Terminal** | ❌ (Must type password) | ❌ (Requires PAM hacks) |  **Instant Face ID prompt** |
+| **Works with External Mechanical Keyboards** | ❌ (No Touch ID key) | ⚠️ (Only login screen) |  **Authenticates in 0.2s** |
+| **Proximity Auto-Lock** | ❌ (Manual lock only) | ❌ (Not supported) |  **Locks when you walk away** |
+| **Cost / Hardware Requirement** | Requires built-in sensor | Requires $400 Apple Watch |  **Uses phone you already own** |
 
 ---
 
 ## Key Features
 
-- **iPhone Face ID for macOS**: Approve `sudo`, screensaver unlock, and authentication dialogs instantly from your phone.
-- **Smart Clamshell Routing**: Automatically detects MacBook lid state — routes challenges to iPhone Face ID when closed or docked with external monitors, and uses Mac Touch ID when open.
+- **Instant Face ID for macOS**: Approve `sudo`, screensaver unlock, and authentication dialogs with a glance.
+- **Smart Clamshell Routing**: Automatically detects your MacBook lid state — routes challenges to iPhone Face ID when closed or docked with external monitors, and uses Mac Touch ID when open.
 - **Proximity Auto-Lock**: Measures Bluetooth Low Energy (BLE) signal strength and automatically locks your Mac within 30 seconds when you carry your iPhone away.
-- **Dual Transport Failover**: Seamless transition between Bluetooth Low Energy (BLE) and Local Network Wi-Fi without dropped sessions.
-- **Hardware-Grade Security**: P-256 ECC keys generated inside your iPhone's Secure Enclave. Private keys never leave your phone.
+- **Dual Transport Failover**: Seamless zero-latency transition between Bluetooth Low Energy (BLE) and Local Network Wi-Fi without dropped sessions.
+- **100% Private & Offline**: No cloud servers, no account registration, and zero analytics.
 
 ---
 
-## Installation & Setup Guide (5 Minutes)
+## Security & Architecture
 
-### Step 1: Install on Your Mac
+> [!IMPORTANT]
+> **Hardware-Backed Protection**: GlanceAuth generates cryptographic P-256 ECC keys directly inside your iPhone's **Secure Enclave**.
+> - **Biometrics never leave the phone**: Face ID verification happens locally on your device's hardware chip.
+> - **Zero knowledge on Mac**: The Mac only receives an encrypted cryptographic signature verifying that your Face ID was approved.
+> - **Session Encryption**: Every request uses ephemeral ECDH key agreement with AES-256-GCM encryption.
 
+---
+
+## Quick Setup Guide (5 Minutes)
+
+### 1. Install on Your Mac
 1. Download **[GlanceAuth-0.1.0.dmg](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.dmg)**.
-2. Open the `.dmg` and drag **`GlanceAuth.app`** into your **`Applications`** folder.
+2. Drag **`GlanceAuth.app`** into your **`Applications`** folder.
 3. Double-click **`GlanceAuth-0.1.0.pkg`** inside the DMG to install the background service.
 4. **First Launch (One-Time Gatekeeper Approval)**:
-   - Because this is a private beta build without an Apple commercial certificate:
-   - **Right-click `GlanceAuth.app` in Applications → click "Open" → click "Open"** in the popup.
-   - GlanceAuth will appear in your top menu bar.
+   - Right-click `GlanceAuth.app` in Applications → click **Open** → click **Open** in the dialog.
+   - GlanceAuth will appear in your Mac menu bar.
+
+### 2. Install on Your iPhone (At Home via Sideloadly)
+*Zero jailbreak or special profiles required.*
+
+1. Download the free desktop utility **Sideloadly** on your Mac from [sideloadly.io](https://sideloadly.io).
+2. Connect your iPhone to your Mac via USB (tap "Trust This Computer" if asked).
+3. Download **[GlanceAuth-0.1.0.ipa](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.ipa)**.
+4. In Sideloadly:
+   - Drag `GlanceAuth-0.1.0.ipa` into the app icon box.
+   - Enter your personal Apple ID email in the "Apple ID" box (used only to sign the certificate locally).
+   - Click **Start**. The app will install onto your iPhone in seconds!
+5. **One-Time Trust**: On your iPhone, go to **Settings → General → VPN & Device Management → Developer App → Trust**.
+
+### 3. Wireless Pairing
+*Disconnect your USB cable — it is never needed again!*
+
+1. On iPhone: In **Settings → GlanceAuth**, ensure **Bluetooth**, **Face ID**, and **Background App Refresh** are all **ON**.
+2. On Mac: Click the GlanceAuth menu bar icon and select **"Re-pair Phone / Show QR..."**.
+3. On iPhone: Open GlanceAuth and tap **"Scan QR Code"**.
+4. Point the camera at the Mac screen. The status turns **Green: "Ready — phone connected"**!
 
 ---
 
-### Step 2: Install on Your iPhone (2 Minutes from Home)
+## Updating to Newer Versions
 
-You do **not** need a jailbroken iPhone. You can install the companion app in 2 minutes using a free desktop utility called **Sideloadly**:
-
-1. **Download Sideloadly on Your Mac**:
-   - Download the free Mac app from [https://sideloadly.io](https://sideloadly.io) and open it.
-2. **Connect iPhone via USB**:
-   - Plug your iPhone into your Mac (tap **"Trust This Computer"** on your iPhone if prompted).
-3. **Transfer GlanceAuth to Your iPhone**:
-   - Download **[GlanceAuth-0.1.0.ipa](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-0.1.0.ipa)**.
-   - In Sideloadly, your iPhone will appear under **"iDevice"**.
-   - Drag **`GlanceAuth-0.1.0.ipa`** into the large app icon box in Sideloadly.
-   - Enter your personal Apple ID email in the **"Apple ID"** box (used only to sign the free developer certificate locally).
-   - Click **"Start"**. GlanceAuth will install directly onto your iPhone home screen!
-4. **One-Time Trust on iPhone**:
-   - Open iPhone **Settings → General → VPN & Device Management**.
-   - Under **Developer App**, tap your Apple ID and tap **Trust**.
-   - Open **GlanceAuth** from your iPhone home screen!
-
-```
- ┌────────────────────────────────────────────────────────┐
- │                      Sideloadly                        │
- │                                                        │
- │  iDevice: [ Your iPhone (USB)                    ▼ ]   │
- │                                                        │
- │  ┌──────────────────────────────────────────────────┐  │
- │  │      [  GlanceAuth-0.1.0.ipa  ]                  │  │
- │  │        (Drag & Drop IPA Here)                    │  │
- │  └──────────────────────────────────────────────────┘  │
- │                                                        │
- │  Apple ID: [ your-email@icloud.com                ]    │
- │                                                        │
- │                    [ ▶ START ]                         │
- └────────────────────────────────────────────────────────┘
-```
+When an update is released:
+- On Mac: Download the new `.dmg` and replace `GlanceAuth.app` in `/Applications`.
+- On iPhone: Drop the new `.ipa` into Sideloadly and click Start.
+- **All pairing is preserved**: iOS performs an in-place update. You do **not** need to re-pair or re-scan the QR code.
 
 ---
 
-### Step 3: Wireless QR Pairing
+## Feedback & Bug Reports
 
-Now you can disconnect the USB cable — it is never needed again!
-
-1. On your iPhone: In **Settings → GlanceAuth**, ensure **Bluetooth**, **Face ID**, and **Background App Refresh** are all **ON**.
-2. On your Mac: Click the GlanceAuth menu bar icon and select **"Re-pair Phone / Show QR..."**.
-3. On your iPhone: Open GlanceAuth and tap **"Scan QR Code"**.
-4. Point the camera at the Mac screen. Once verified, the menu bar indicator turns **Green: "Ready — phone connected"**!
-
----
-
-## How Updates Work
-
-When a new version is released:
-1. Download the new `.dmg` and `.ipa` from the [Releases page](https://github.com/aymanysr/GlanceAuth-Releases/releases).
-2. On Mac: Replace `GlanceAuth.app` in `/Applications`.
-3. On iPhone: Drop the new `.ipa` into Sideloadly and click **Start**.
-4. **Your pairing is preserved**: iOS performs an in-place update. You do **not** need to re-scan the QR code or configure settings again!
-
----
-
-## The 7-Day Free Certificate & Wi-Fi Auto-Refresh
-
-Apple places a 7-day expiration on apps signed with free personal Apple IDs:
-- **Automatic Wi-Fi Refresh**: Sideloadly includes an automatic background renewal feature. Leave Sideloadly running on your Mac while your phone and Mac are on the same home Wi-Fi network, and it will silently renew the certificate over the air before it expires.
-- **Manual Reset**: Installing any update also resets the 7-day clock back to full.
-
----
-
-## Bug Reports & Feedback
-
-If you encounter any issues or have feature requests, please open an issue on the [GitHub Issues](https://github.com/aymanysr/GlanceAuth-Releases/issues) tab!
+Found an issue or have a feature request? Please open an issue on the [GitHub Issues](https://github.com/aymanysr/GlanceAuth-Releases/issues) tab!
 
 ---
 
