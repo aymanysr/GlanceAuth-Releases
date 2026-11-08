@@ -5,16 +5,16 @@
     Works in clamshell mode, with external monitors, and across all macOS terminal & system prompts.
   </p>
   <p align="center">
-    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.1.0.dmg">
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.2.0.dmg">
       <img src="https://img.shields.io/badge/Download_for_macOS-DMG-black?style=for-the-badge&logo=apple" alt="Download macOS DMG">
     </a>
     &nbsp;
-    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.1.0.ipa">
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.2.0.ipa">
       <img src="https://img.shields.io/badge/Download_for_iOS-IPA-007AFF?style=for-the-badge&logo=apple" alt="Download iOS IPA">
     </a>
     &nbsp;
-    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/tag/v2.1.0">
-      <img src="https://img.shields.io/badge/Version-v2.1.0_Beta-34C759?style=for-the-badge" alt="Version v2.1.0">
+    <a href="https://github.com/aymanysr/GlanceAuth-Releases/releases/tag/v2.2.0">
+      <img src="https://img.shields.io/badge/Version-v2.2.0-34C759?style=for-the-badge" alt="Version v2.2.0">
     </a>
   </p>
   <p align="center">
@@ -100,9 +100,9 @@ If you dock your MacBook or use an external keyboard and monitor, you already kn
 ## Quick Setup Guide (5 Minutes)
 
 ### 1. Install on Your Mac
-1. Download **[GlanceAuth-2.1.0.dmg](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.1.0.dmg)**.
+1. Download **[GlanceAuth-2.2.0.dmg](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.2.0.dmg)**.
 2. Drag **`GlanceAuth.app`** into your **`Applications`** folder.
-3. Double-click **`GlanceAuth-2.1.0.pkg`** inside the DMG to install the background service.
+3. Double-click **`GlanceAuth-2.2.0.pkg`** inside the DMG to install the background service.
 4. **First Launch (One-Time Gatekeeper Approval)**:
    - Right-click `GlanceAuth.app` in Applications → click **Open** → click **Open** in the dialog.
    - GlanceAuth will appear in your Mac menu bar.
@@ -112,9 +112,9 @@ If you dock your MacBook or use an external keyboard and monitor, you already kn
 
 1. Download the free desktop utility **Sideloadly** on your Mac from [sideloadly.io](https://sideloadly.io).
 2. Connect your iPhone to your Mac via USB (tap "Trust This Computer" if asked).
-3. Download **[GlanceAuth-2.1.0.ipa](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.1.0.ipa)**.
+3. Download **[GlanceAuth-2.2.0.ipa](https://github.com/aymanysr/GlanceAuth-Releases/releases/latest/download/GlanceAuth-2.2.0.ipa)**.
 4. In Sideloadly:
-   - Drag `GlanceAuth-2.1.0.ipa` into the app icon box.
+   - Drag `GlanceAuth-2.2.0.ipa` into the app icon box.
    - Enter your personal Apple ID email in the "Apple ID" box (used only to sign the certificate locally).
    - Click **Start**. The app will install onto your iPhone in seconds!
 5. **One-Time Trust**: On your iPhone, go to **Settings → General → VPN & Device Management → Developer App → Trust**.
